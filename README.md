@@ -14,11 +14,11 @@ Resources:
 Completed:
   - Neural net models
   - Accuracy
-      mnist_d (99.05%)
-      mnist_f (93.12%)
-      cifar_10 (76.69%)
-      cifar_100_f (41.12%)
-      cifar_100_c (50.88%)
+      - mnist_d (99.05%)
+      - mnist_f (93.12%)
+      - cifar_10 (76.69%)
+      - cifar_100_f (41.12%)
+      - cifar_100_c (50.88%)
   - Pipeline & misc
   - Report
 
