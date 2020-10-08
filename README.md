@@ -19,7 +19,7 @@ Completed:
       - cifar_10 (76.69%)
       - cifar_100_f (41.12%)
       - cifar_100_c (50.88%)
-  - Pipeline & misc
+  - Pipeline & misc (No Ann plot)
   - Report
 
 How is a CNN superior to standard ANNs for image processing?
