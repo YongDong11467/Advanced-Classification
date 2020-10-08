@@ -86,8 +86,6 @@ def buildTFConvNet(x, y, eps = 10, dropout = True, dropRate = 0.25):
     inShape = (IH, IW, IZ)
     lossType = keras.losses.categorical_crossentropy
     if DATASET == "cifar_100_f" or DATASET == "cifar_100_c":
-        # 36.20 for cifar_100_f
-        # 50.88 for cifar_100_c
         eps = 17
         model.add(keras.layers.Conv2D(32, kernel_size=(3, 3), activation="relu", input_shape=inShape, padding='same'))
         model.add(keras.layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'))
@@ -100,7 +98,6 @@ def buildTFConvNet(x, y, eps = 10, dropout = True, dropRate = 0.25):
         model.add(keras.layers.Dense(128, activation="relu"))
         model.add(keras.layers.Dense(NUM_CLASSES, activation="softmax"))
     elif DATASET == "mnist_d":
-        # 99.05
         eps = 6
         model.add(keras.layers.Conv2D(32, kernel_size=(3, 3), activation= "relu", input_shape=inShape))
         model.add(keras.layers.Conv2D(64, kernel_size=(3, 3), activation="relu"))
@@ -110,7 +107,6 @@ def buildTFConvNet(x, y, eps = 10, dropout = True, dropRate = 0.25):
         model.add(keras.layers.Dense(128, activation="relu"))
         model.add(keras.layers.Dense(NUM_CLASSES, activation="softmax"))
     elif DATASET == "mnist_f":
-        # 92.08
         eps = 11
         model.add(keras.layers.Conv2D(32, kernel_size=(3, 3), activation="relu", input_shape=inShape, padding='same'))
         model.add(keras.layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'))
@@ -123,7 +119,6 @@ def buildTFConvNet(x, y, eps = 10, dropout = True, dropRate = 0.25):
         model.add(keras.layers.Dense(128, activation="relu"))
         model.add(keras.layers.Dense(NUM_CLASSES, activation="softmax"))
     elif DATASET == "cifar_10":
-        # 72.16
         eps = 11
         model.add(keras.layers.Conv2D(32, kernel_size=(3, 3), activation="relu", input_shape=inShape, padding='same'))
         model.add(keras.layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'))
