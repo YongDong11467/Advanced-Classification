@@ -17,13 +17,13 @@ tf.random.set_seed(1618)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 #ALGORITHM = "guesser"
-ALGORITHM = "tf_net"
-#ALGORITHM = "tf_conv"
+#ALGORITHM = "tf_net"
+ALGORITHM = "tf_conv"
 
-#DATASET = "mnist_d"
+DATASET = "mnist_d"
 #DATASET = "mnist_f"
 #DATASET = "cifar_10"
-DATASET = "cifar_100_f"
+#DATASET = "cifar_100_f"
 #DATASET = "cifar_100_c"
 
 if DATASET == "mnist_d":
@@ -247,15 +247,15 @@ def evalResults(data, preds):
 #=========================<Main>================================================
 
 def main():
-    # datasets = ["mnist_d", "mnist_f", "cifar_10", "cifar_100_c", "cifar_100_f"]
+    datasets = ["mnist_d", "mnist_f", "cifar_10", "cifar_100_c", "cifar_100_f"]
     # annResults = [97.74, 74.25, 39.50, ]
-    # cnnResults = [99.05, 93.12, 76.69, 55.28, 41.12]
+    cnnResults = [99.05, 93.12, 76.69, 55.28, 41.12]
     # ypos = np.arange(len(datasets))
     # plt.xticks(ypos, datasets)
-    # plt.bar(ypos, annResults)
+    plt.bar(ypos, annResults)
     # plt.savefig("ANNAccuracy.pdf")
-    # plt.bar(ypos, cnnResults)
-    # plt.savefig("CNNAccuracy.pdf")
+    plt.bar(ypos, cnnResults)
+    plt.savefig("CNNAccuracy.pdf")
     raw = getRawData()
     data = preprocessData(raw)
     model = trainModel(data[0])
